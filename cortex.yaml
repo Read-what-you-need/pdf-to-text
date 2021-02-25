@@ -3,7 +3,6 @@
 - name: pdf-to-text
   kind: RealtimeAPI
   predictor:
-    image: registry.hub.docker.com/soulbliss/python-predictor-cpu-cortex-0.21-redis
     type: python
     path: predictor.py
     processes_per_replica: 1
