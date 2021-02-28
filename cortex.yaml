@@ -7,7 +7,8 @@
     path: predictor.py
     processes_per_replica: 1
     threads_per_process: 1
-
+  networking:
+    local_port: 8890
   compute:
     cpu: 1
     mem: 500M
