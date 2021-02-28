@@ -32,7 +32,7 @@ class PythonPredictor:
         self.aws_region_name = os.getenv('AWS_REGION_NAME')
 
         # connect with the s3 resource to dump embeddings and text files
-        self.s3 = boto3.resource("s3", aws_access_key_id=self.aws_access_key_id , aws_secret_access_key=self.aws_secret_access_key)
+        self.s3 = boto3.resource("s3", aws_access_key_id=self.aws_access_key_id , aws_secret_access_key=self.aws_secret_access_key, region_name=self.aws_region_name)
         self.client = boto3.client('sqs',  aws_access_key_id=self.aws_access_key_id , aws_secret_access_key=self.aws_secret_access_key, region_name=self.aws_region_name)
 
 
