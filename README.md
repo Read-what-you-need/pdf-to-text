@@ -6,3 +6,4 @@
 - Enqueu file id to amazon sqs
 
 ## Steps to run
+- `docker-compose up --build ` opens up `pdf-to-text` service on port 8000
