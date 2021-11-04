@@ -1,3 +1,9 @@
 pdftotext==2.1.5
+
 fastapi==0.70.0
 uvicorn==0.15.0
+
+python-multipart==0.0.5
+
+boto3==1.19.10
+numpy==1.21.3

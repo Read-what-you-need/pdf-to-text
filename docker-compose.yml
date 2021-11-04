@@ -1,6 +1,8 @@
 version: '3'
 services:
     pdf-to-text:
+        env_file:
+        - .env
         build:
             context: .
         ports:
