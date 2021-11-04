@@ -1,0 +1,9 @@
+version: '3'
+services:
+    pdf-to-text:
+        build:
+            context: .
+        ports:
+            - "8000:80"
+        volumes:
+            - ./app:/code/app
