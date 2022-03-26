@@ -3,6 +3,7 @@ services:
     pdf-to-text:
         env_file:
         - .env
+        container_name: pdf-to-text
         build:
             context: .
         ports:

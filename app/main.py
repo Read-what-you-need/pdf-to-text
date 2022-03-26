@@ -76,4 +76,4 @@ def convert_pdf(hash: str = Form(...), file: UploadFile = Form(...)):
     job_id=enqueue_response['MessageId']
 
 
-    return {"file-id": hash, "upload": True, "queue-id": job_id}
+    return {"file_id": hash, "upload": True, "queue_id": job_id}
