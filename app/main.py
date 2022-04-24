@@ -28,7 +28,7 @@ print('loading 😊 pdftotext api')
 aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
 aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
 aws_region_name = os.getenv('AWS_REGION_NAME')
-
+object_store_name = os.getenv('AWS_S3_OBJECT_STORE')
 
 # connect with the s3 resource to dump embeddings and text files
 s3 = boto3.resource("s3", aws_access_key_id=aws_access_key_id , aws_secret_access_key=aws_secret_access_key, region_name=aws_region_name)
@@ -58,6 +58,6 @@ def convert_pdf(hash: str = Form(...), file: UploadFile = Form(...)):
     content="\n\n".join(pdf)
 
     # upload to s3
-    s3.Object('readneedobjects', 'v2/'+hash+'/file.txt').put(Body=content)
+    s3.Object(object_store_name, 'v2/'+hash+'/file.txt').put(Body=content)
 
     return {"file_id": hash, "upload": True}
