@@ -48,7 +48,7 @@ app.add_middleware(
 
 
 # routes defined here
-@app.post("/convert-pdf")
+@app.post("/")
 def convert_pdf(hash: str = Form(...), file: UploadFile = Form(...)):
     print('⚡ request recieved ⚡: hash: ',hash)
 
