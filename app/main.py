@@ -61,3 +61,7 @@ def convert_pdf(hash: str = Form(...), file: UploadFile = Form(...)):
     s3.Object(object_store_name, 'v2/'+hash+'/file.txt').put(Body=content)
 
     return {"file_id": hash, "upload": True}
+
+@app.get("/")
+async def root():
+    return {"message": "Hello convertors"}
